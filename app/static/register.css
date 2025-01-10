@@ -1,0 +1,111 @@
+/* Общие стили страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Используем шрифт Inter */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #FFD166, #F28D35, #D16BA5, #8C5FBF, #2D1E6B); /* Градиентный фон */
+}
+
+/* Контейнер для формы регистрации */
+.register-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Более мягкая тень */
+    width: 350px;
+}
+
+/* Заголовок */
+.register-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2D1E6B; /* Темно-фиолетовый цвет */
+}
+
+/* Эмодзи с light-skin tone */
+.register-container h1 span {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+/* Поля ввода */
+.register-container input {
+    width: calc(100% - 24px); /* Учитываем отступы */
+    padding: 12px;
+    margin: 10px auto; /* Центрируем поля по горизонтали */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block; /* Убедимся, что элемент блоковый */
+    background: #F8F8F8;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    text-align: center; /* Текст по центру поля (опционально) */
+}
+
+/* Фокус на поле ввода */
+.register-container input:focus {
+    outline: none;
+    border-color: #FFD166; /* Желтая граница при фокусе */
+    box-shadow: 0 0 5px rgba(255, 209, 102, 0.5);
+}
+
+/* Кнопка регистрации */
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #F28D35; /* Новый оранжевый цвет из градиента */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-container button:hover {
+    background: #D16BA5; /* Темно-фиолетовый оттенок для ховера */
+}
+
+/* Сообщение об ошибке */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Ссылка на вход */
+.register-container .login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.register-container .login-link a {
+    color: #0078d4; /* Синий цвет ссылки */
+    text-decoration: none;
+}
+
+.register-container .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Ссылка на восстановление пароля */
+.register-container .forgot-password {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.register-container .forgot-password a {
+    color: #8C5FBF; /* Фиолетовый */
+    text-decoration: none;
+}
+
+.register-container .forgot-password a:hover {
+    text-decoration: underline;
+}

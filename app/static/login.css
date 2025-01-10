@@ -1,0 +1,109 @@
+/* Общие стили страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Используем шрифт Inter */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #FFD166, #F28D35, #D16BA5, #8C5FBF, #2D1E6B); /* Градиентный фон */
+}
+
+/* Контейнер для формы логина */
+.login-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff; /* Светлый фон для контейнера */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    width: 350px;
+}
+
+/* Заголовок */
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2D1E6B; /* Темно-фиолетовый текст */
+}
+
+/* Эмодзи с light-skin tone */
+.login-container h1 span {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+/* Поля ввода */
+.login-container input {
+    width: calc(100% - 24px); /* Учитываем отступы */
+    padding: 12px;
+    margin: 10px auto; /* Центрируем поля по горизонтали */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block; /* Убедимся, что элемент блоковый */
+    background: #F8F8F8;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    text-align: center; /* Текст по центру поля (опционально) */
+}
+
+/* Поле ввода с фокусом */
+.login-container input:focus {
+    outline: none;
+    border-color: #FFD166; /* Желтая граница при фокусе */
+    box-shadow: 0 0 5px rgba(255, 209, 102, 0.5);
+}
+
+/* Кнопка входа */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #8C5FBF; /* Фиолетовая кнопка */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background: #2D1E6B; /* Темно-фиолетовый при наведении */
+}
+
+/* Ссылка на восстановление пароля */
+.login-container .forgot-password {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-container .forgot-password a {
+    color: #FFD166; /* Желтая ссылка */
+    text-decoration: none;
+}
+
+.login-container .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Ссылка на регистрацию */
+.login-container .register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-container .register-link a {
+    color: #8C5FBF; /* Фиолетовая ссылка */
+    text-decoration: none;
+}
+
+.login-container .register-link a:hover {
+    text-decoration: underline;
+}
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+}

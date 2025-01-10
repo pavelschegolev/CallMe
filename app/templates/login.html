@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Call Me 🤙🏻</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="welcome-container">
+            <h1 class="typing-text">Вход в Call Me🤙🏻</h1>
+        </div>
+        <!-- Сообщение об ошибке -->
+        {% if error_message %}
+        <div class="error-message">
+            <p>{{ error_message }}</p>
+        </div>
+        {% endif %}
+
+        <form class="login-form" action="/auth/login" method="post">
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+        <div class="register-link">
+            <p>Нет аккаунта? <a href="/auth/register">Зарегистрируйтесь</a></p>
+            <a href="/error">Забыли пароль?</a>
+        </div>
+    </div>
+</body>
+</html>

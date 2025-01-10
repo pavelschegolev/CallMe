@@ -1,0 +1,51 @@
+/* Общие стили для страницы ошибки */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Используем шрифт Inter */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d7da;
+}
+
+/* Контейнер ошибки */
+.error-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Заголовок ошибки */
+.error-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #721c24;
+}
+
+/* Текст ошибки */
+.error-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #721c24;
+}
+
+/* Кнопка возврата */
+.error-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.error-container .btn:hover {
+    background-color: #bd2130;
+}

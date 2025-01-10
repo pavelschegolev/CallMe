@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Me 🤙🏻</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main_page.css') }}">
+    <script src="{{ url_for('JS', path='current_user.js') }}" defer></script>
+    <script src="{{ url_for('JS', path='chat_list2.js') }}" defer></script>
+    <script src="{{ url_for('JS', path='chat_messages2.js') }}" defer></script>
+    <script src="{{ url_for('JS', path='chat_header.js') }}" defer></script>
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <header class="top-bar">
+        <div class="menu-btn">☰</div>
+        <div class="logo">Call Me 🤙🏻</div>
+        <div class="user-avatar">
+             <img src="{{ url_for('static', path='avatars/default.png') }}" alt="User Avatar">
+        </div>
+    </header>
+    <main class="main-content">
+        <!-- Левая панель (Список чатов) -->
+        <aside class="left-panel">
+            <div class="search-bar">
+                <input type="text" placeholder="Search chats...">
+            </div>
+            <div class="chat-list" id="chat-list"></div>
+            <button class="new-chat-btn">+ New Chat</button>
+        </aside>
+        <!-- Правая панель (Область чата) -->
+        <section class="chat-panel">
+            <!-- Шапка чата -->
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-title" id="chat-title"></div>
+                    <div class="chat-status" id="chat-status"></div>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="chat-action-btn" id="chat-call-btn">📞</button>
+                    <button class="chat-action-btn" id="chat-video-btn">📹</button>
+                    <button class="chat-action-btn" id="chat-settings-btn">⚙️</button>
+                </div>
+            </div>
+
+            <!-- Область сообщений -->
+            <div id="chat-messages-container">
+                <div id="chat-messages"></div>
+            </div>
+            <!-- Поле ввода -->
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message...">
+                <button class="attach-btn">📎</button>
+                <button class="send-btn">➤</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

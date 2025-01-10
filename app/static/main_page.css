@@ -1,0 +1,281 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Верхняя панель */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #FFD166, #F28D35); /* Градиент от желтого к оранжевому */
+    color: white;
+    padding: 5px 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Левая панель */
+.left-panel {
+    width: 25%;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+}
+.search-bar{
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    margin: 5px;
+    border: 1px linear-gradient(to right, #FFD166, #F28D35);
+}
+.search-bar input {
+    width: 100%; /* Ширина поля поиска */
+    padding: 5px;
+    border-radius: 7px;
+    text-align: center; /* Текст по центру (если нужно) */
+}
+
+/* Основные стили панели чатов */
+.chat-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    max-height: 40vh;
+}
+
+/* Элемент чата */
+.chat-list-item {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #F0EBF4; /* Подложка для всего блока */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.chat-list-item:hover {
+    background-color: #E6E6FA; /* Подсветка при наведении */
+}
+
+/* Заголовок элемента чата */
+.chat-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-item-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.chat-item-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Последнее сообщение */
+.chat-item-last-message {
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+
+.chat-item-last-message strong {
+    color: #222;
+}
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+    margin: 5px;
+}
+
+/* Кнопка создания чата всегда внизу */
+.new-chat-btn {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #FFD166, #F28D35);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; /* Запрещаем уменьшаться панели */
+}
+
+.new-chat-btn:hover {
+    background: linear-gradient(to right, #D16BA5, #8C5FBF); /* Градиент для ховера */
+}
+/* Правая панель */
+.chat-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.chat-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.chat-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.chat-status {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Поле ввода */
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Запрещаем уменьшаться панели */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.attach-btn, .send-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#chat-messages-container {
+    flex: 1;
+    overflow-y: auto;
+    max-height: auto;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch; /* Выравнивание сообщений по умолчанию влево */
+}
+
+/* Общее сообщение */
+/* Сообщения (общие стили) */
+.message-item {
+    max-width: 60%;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    line-height: 1;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Отправленные сообщения (правая сторона) */
+.message-item.sent {
+    align-self: flex-end; /* Выравнивание по правому краю */
+    margin-left: auto; /* Отталкиваем от левого края */
+    background: linear-gradient(to right, #FFD166, #F28D35);
+    color: white;
+    text-align: right;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 15px; /* Скругление нижнего правого угла */
+    border-bottom-left-radius: 15px;
+}
+
+/* Убираем имя отправителя для отправленных сообщений */
+.message-item.sent strong {
+    display: none; /* Полностью скрываем имя отправителя */
+}
+
+/* Полученные сообщения (левая сторона) */
+.message-item.received {
+    align-self: flex-start;
+    background: linear-gradient(to right, #D16BA5, #8C5FBF);
+    color: white;
+    text-align: left;
+    border-top-left-radius: 0; /* Скругление убрано сверху слева */
+}
+
+/* Время сообщения */
+.message-item .message-time {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: right;
+}
+
+/* Имя отправителя (только для полученных сообщений) */
+.message-item.received strong {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Дополнительные улучшения для прокрутки */
+#chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background-color: #b39bc8;
+    border-radius: 10px;
+}
+.message-date {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #888;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
